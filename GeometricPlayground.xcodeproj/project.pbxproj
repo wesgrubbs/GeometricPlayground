@@ -39,9 +39,24 @@
 		1BC937D32CC6A1F9005B47E0 /* GeometricPlayground Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GeometricPlayground Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1BC937F42CC6AE32005B47E0 /* Exceptions for "GeometricPlayground" folder in "GeometricPlayground Watch App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Shared/CircleView.swift,
+				Shared/CircularOrbitView.swift,
+				Shared/Color.swift,
+			);
+			target = 1BC937D22CC6A1F9005B47E0 /* GeometricPlayground Watch App */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1BC937C52CC6A1F7005B47E0 /* GeometricPlayground */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1BC937F42CC6AE32005B47E0 /* Exceptions for "GeometricPlayground" folder in "GeometricPlayground Watch App" target */,
+			);
 			path = GeometricPlayground;
 			sourceTree = "<group>";
 		};

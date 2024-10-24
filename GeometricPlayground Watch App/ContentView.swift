@@ -9,13 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+            LazyVGrid (columns: Array(repeating: GridItem(.fixed(80)), count: 2)){
+                //Spacer()
+                
+                CircleView()
+
+                CircleView()
+                
+                CircleView()
+                
+                CircleView()
+                
+                //Spacer()
+            }
+            .padding(.all)
+            .frame(width: 410, height: 800)
+            .background(Color.black)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            //.ignoresSafeArea()
     }
 }
 
