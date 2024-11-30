@@ -48,6 +48,7 @@
 				Shared/CircleView3.swift,
 				Shared/CircularOrbitView.swift,
 				Shared/Color.swift,
+				Shared/SquareGradientView.swift,
 				Shared/SquareView1.swift,
 			);
 			target = 1BC937D22CC6A1F9005B47E0 /* GeometricPlayground Watch App */;

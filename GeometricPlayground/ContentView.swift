@@ -7,34 +7,45 @@
 
 import SwiftUI
 
+func getRandomColor() -> Color {
+    let colors = [
+        Color.black,
+        Color.red,
+        Color(hex: "#01140E"),
+        Color(hex: "#008148"),
+        Color(hex: "#C6C013"),
+        Color(hex: "#EF8A17"),
+        Color(hex: "#EF2917"),
+    ]
+    return colors.randomElement() ?? Color.black
+}
+
 struct ContentView: View {
-    @State private var numberOfCols = Int.random(in: 1...8)
+    //@State private var numberOfCols = Int.random(in: 1...8)
+    @State private var randDegrees = Double.random(in: 0...360)
+    @State private var randScale = Double.random(in: 0.5...1.5)
+    @State private var numberOfCols = 2
     @State private var redrawTrigger = false
     
     var body: some View {
-        let numberOfCircles: Int = 120
+        let numberOfCircles: Int = 1
         let screenWidth = UIScreen.main.bounds.width
         let colWidth = screenWidth / CGFloat(numberOfCols)
         
-        ScrollView {
-            LazyVGrid(
-                columns: Array(repeating: GridItem(.fixed(CGFloat(colWidth)), spacing: 1), count: numberOfCols),
-                spacing: 1
-            ) {
-                ForEach(0..<numberOfCircles) { index in
-                    SquareView1(squareSize: colWidth)
-                }
-            }
-            .padding(0)
-            .id(redrawTrigger)  // Force redraw when this changes
+        HStack {
+            
+            Spacer()
+            SquareGradientView(squareSize: colWidth)
+                .rotationEffect(.degrees(randDegrees))
+                .scaleEffect(CGFloat(randScale))
         }
-        .padding(0)
-        .background(Color.black)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(getRandomColor())
         .edgesIgnoringSafeArea(.all)
         .onTapGesture {
             withAnimation {
-                numberOfCols = Int.random(in: 1...8)
+                randDegrees = Double.random(in: 0...360)
+                randScale = Double.random(in: 0.5...1.5)
                 redrawTrigger.toggle()  // Toggle to force redraw
             }
         }
