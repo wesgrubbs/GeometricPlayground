@@ -43,9 +43,12 @@
 		1BC937F42CC6AE32005B47E0 /* Exceptions for "GeometricPlayground" folder in "GeometricPlayground Watch App" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Shared/CircleView.swift,
+				Shared/CircleView1.swift,
+				Shared/CircleView2.swift,
+				Shared/CircleView3.swift,
 				Shared/CircularOrbitView.swift,
 				Shared/Color.swift,
+				Shared/SquareView1.swift,
 			);
 			target = 1BC937D22CC6A1F9005B47E0 /* GeometricPlayground Watch App */;
 		};
@@ -420,6 +423,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = GeometricPlayground;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.graphics-design";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -452,6 +456,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = GeometricPlayground;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.graphics-design";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

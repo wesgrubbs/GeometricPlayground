@@ -12,13 +12,13 @@ struct ContentView: View {
             LazyVGrid (columns: Array(repeating: GridItem(.fixed(80)), count: 2)){
                 //Spacer()
                 
-                CircleView()
+                CircleView1()
 
-                CircleView()
+                CircleView1()
                 
-                CircleView()
+                CircleView1()
                 
-                CircleView()
+                CircleView1()
                 
                 //Spacer()
             }

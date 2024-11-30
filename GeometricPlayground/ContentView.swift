@@ -8,31 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var numberOfCols = Int.random(in: 1...8)
+    @State private var redrawTrigger = false
     
     var body: some View {
-        LazyVGrid (columns: Array(repeating: GridItem(.fixed(100)), count: 3)){
-            
-            CircleView()
-            CircleView()
-            CircleView()
-            
-            CircleView()
-            CircleView()
-            CircleView()
-            
-            CircleView()
-            CircleView()
-            CircleView()
-            
-            CircleView()
-            CircleView()
-            CircleView()
+        let numberOfCircles: Int = 120
+        let screenWidth = UIScreen.main.bounds.width
+        let colWidth = screenWidth / CGFloat(numberOfCols)
+        
+        ScrollView {
+            LazyVGrid(
+                columns: Array(repeating: GridItem(.fixed(CGFloat(colWidth)), spacing: 1), count: numberOfCols),
+                spacing: 1
+            ) {
+                ForEach(0..<numberOfCircles) { index in
+                    SquareView1(squareSize: colWidth)
+                }
+            }
+            .padding(0)
+            .id(redrawTrigger)  // Force redraw when this changes
         }
-        .padding(.all)
-        .frame(width: 500, height: 800)
+        .padding(0)
         .background(Color.black)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        //.ignoresSafeArea()
+        .edgesIgnoringSafeArea(.all)
+        .onTapGesture {
+            withAnimation {
+                numberOfCols = Int.random(in: 1...8)
+                redrawTrigger.toggle()  // Toggle to force redraw
+            }
+        }
     }
 }
 
