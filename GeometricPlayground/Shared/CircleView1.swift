@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct CircleView: View {
+struct CircleView1: View {
     @State private var rotationAngle: Double = 0
     @State private var orbitRadius: CGFloat = 0
     @State private var circleSize: CGFloat = 0
@@ -87,5 +87,5 @@ struct CircleView: View {
     }
 }
 #Preview {
-    CircleView()
+    CircleView1()
 }
