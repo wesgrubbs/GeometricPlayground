@@ -1,0 +1,1 @@
+More documentation to come. Much of the code here is derived from exploration without specific purpose. I've compartmentialized core assets here that can be played with and modified in the ContentView.
