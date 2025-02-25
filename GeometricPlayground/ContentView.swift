@@ -49,6 +49,32 @@ struct ContentView: View {
                 redrawTrigger.toggle()  // Toggle to force redraw
             }
         }
+        
+        /* Circle view
+         
+         LazyVGrid (columns: Array(repeating: GridItem(.fixed(80)), count: 2)){
+             //Spacer()
+             
+             CircleView1()
+
+             CircleView1()
+             
+             CircleView1()
+             
+             CircleView1()
+             
+             CircleView1()
+             
+             CircleView1()
+             
+             CircleView1()
+             
+             CircleView1()
+             
+             //Spacer()
+         }
+         .padding(.all)
+         .frame(width: 410, height: 800)*/
     }
 }
 
